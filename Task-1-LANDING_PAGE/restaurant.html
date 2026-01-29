@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasty Bites | Restaurant Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body { background: #fff; color: #333; }
+
+    /* Navbar */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 60px; background: #111; color: white; position: sticky; top: 0; z-index: 100;
+    }
+
+    .logo { font-size: 22px; font-weight: 600; color: #ffb703; }
+
+    nav ul { display: flex; gap: 25px; list-style: none; }
+    nav a { text-decoration: none; color: white; transition: 0.3s; }
+    nav a:hover { color: #ffb703; }
+
+    /* Hero Section with Food Background */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.65)),
+        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover; background-position: center;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; color: white; padding: 20px;
+    }
+
+    .hero h1 { font-size: 48px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; margin-bottom: 25px; max-width: 650px; }
+
+    .hero button {
+      padding: 12px 32px; border: none; border-radius: 25px; background: #ffb703;
+      font-size: 16px; cursor: pointer; transition: 0.3s;
+    }
+    .hero button:hover { transform: scale(1.05); background: #ffc933; }
+
+    /* Features */
+    .features { padding: 70px 60px; text-align: center; background: #fafafa; }
+    .features h2 { margin-bottom: 35px; font-size: 32px; }
+
+    .feature-cards {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;
+    }
+
+    .card {
+      background: #fff; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      padding: 25px; transition: 0.3s; font-weight: 500;
+    }
+    .card:hover { transform: translateY(-8px); }
+
+    /* Food Gallery */
+    .gallery { padding: 70px 60px; text-align: center; }
+    .gallery h2 { margin-bottom: 30px; font-size: 32px; }
+
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%; height: 200px; object-fit: cover; border-radius: 14px;
+      transition: 0.3s; box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    }
+
+    .gallery-grid img:hover { transform: scale(1.05); }
+
+    /* CTA */
+    .cta { background: #111; color: white; text-align: center; padding: 60px 20px; }
+    .cta h2 { margin-bottom: 15px; font-size: 30px; }
+    .cta p { margin-bottom: 15px; }
+
+    .cta button {
+      padding: 12px 32px; border: none; border-radius: 25px; background: #ffb703;
+      font-size: 16px; cursor: pointer;
+    }
+
+    /* Footer */
+    footer { background: #000; color: white; text-align: center; padding: 15px; }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      nav { padding: 15px 25px; }
+      .hero h1 { font-size: 34px; }
+      .features, .gallery { padding: 50px 25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Tasty Bites</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Delicious Food, Cozy Ambience</h1>
+    <p>Fresh ingredients, expert chefs, and mouth-watering dishes made with love.</p>
+    <button>Order Now</button>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Why Choose Us</h2>
+    <div class="feature-cards">
+      <div class="card">🍽 Fresh & Tasty Food</div>
+      <div class="card">👨‍🍳 Expert Chefs</div>
+      <div class="card">🚀 Fast Service</div>
+      <div class="card">🌟 Premium Quality</div>
+    </div>
+  </section>
+
+  <!-- Food Image Gallery -->
+  <section class="gallery" id="gallery">
+    <h2>Our Delicious Dishes</h2>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Pizza">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Burger">
+      <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=800&q=80" alt="Pasta">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Indian Food">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" alt="Dessert">
+      <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?auto=format&fit=crop&w=800&q=80" alt="Salad">
+      <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80" alt="Coffee">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Fries">
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Taste Happiness?</h2>
+    <p>Order your favorite dishes now and enjoy a memorable meal.</p>
+    <button>Order Online</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Tasty Bites Restaurant. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
