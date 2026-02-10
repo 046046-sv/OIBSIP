@@ -1,74 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prasanna | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>prasanna papagari | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-display: block;
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background-color: #f4f6fb;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* LEFT PROFILE */
+        .profile {
+            width: 260px;
+            background-color: #061baa;
+            padding: 25px 20px;
+            text-align: center;
+            text-decoration: rgb(230, 234, 238);
+            box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+        }
+
+        .profile img {
+           width: 200px;
+           height: 200px;
+           border-radius: 14px;
+           object-fit: cover;
+           margin-bottom: 15px;
+           border: 3px solid #ffffff;        /* light border */
+           box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+
+        .profile h2 {
+            margin: 8px 0 5px;
+        }
+
+        .profile p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .info {
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .info div {
+            margin: 10px 0;
+        }
+        .pro{
+            color: #141313;
+        }
+
+        /* RIGHT CONTENT */
+        .content {
+            flex: 1;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            color: #333;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #061baa;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 13px;
+        }
+
+        .projects {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 240px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .profile {
+                width: 100%;
+            }
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            width: 240px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            cursor: pointer;
+
+    /* animation setup */
+            transition: 
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+        .spark{
+            cursor: pointer;
+
+    /* animation setup */
+            transition: 
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+        .spark:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+/* Hover animation */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Click animation */
+.card:active {
+    transform: scale(0.98);
+}
+
+    </style>
 </head>
+
 <body>
 
-  <header>
-    <nav>
-      <h2 class="logo">prasanna papagari</h2>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<div class="container">
 
-  <section id="home" class="home">
-    <h1>Hi, I'm <span>prasanna papagari</span></h1>
-    <h3>Web Developer & JavaScript Enthusiast</h3>
-    <a href="#projects" class="btn">View My Work</a>
-    <div class="profile-img">
-        <img src="images/profile.jpeg" alt="Profile Photo">
-    </div>
-  </section>
+    <!-- LEFT PROFILE -->
+    <aside class="profile">
+        <img src="profile.jpg" alt="Profile Photo">
+        <h2>prasanna papagari</h2>
+        <h3>Web Developer</h3>
+        <div class="info">
+            <div>📧 papagariprasanna046@gmail.com</div>
+            <div>📍 Proddatur,Kadapa</div>
+            <div>🌐 github.com/046046-sv</div>
+        </div>
+    </aside>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate web developer skilled in HTML, CSS, and JavaScript. I enjoy building responsive and user-friendly websites.Very Interested to work in real-time projects.</p>
-  </section>
+    <!-- RIGHT CONTENT -->
+    <main class="content">
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-box">
-      <p>HTML</p>
-      <div class="bar"><span class="html"></span></div>
+        <section>
+            <h1>Hello 👋</h1>
+            <p>I build clean and responsive websites.</p>
+        </section>
 
-      <p>CSS</p>
-      <div class="bar"><span class="css"></span></div>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I am a passionate web developer with hands-on experience in HTML,
+                CSS, and JavaScript. I enjoy learning new technologies and building
+                real-world projects.Currently I am working on React for an hands on experience.
+                Creating intuitive and visually appealing interfaces that provide excellent user experiences.
+            </p>
+        </section>
 
-      <p>JavaScript</p>
-      <div class="bar"><span class="js"></span></div>
-    </div>
-  </section>
+        <section>
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="spark">HTML</span>
+                <span class="spark">CSS</span>
+                <span class="spark">JavaScript</span>
+                <span class="spark">React</span>
+                <span class="spark">Canva</span>
+            </div>
+        </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="card">Restaurant app landing page</div>
-      <div class="card">To-Do App</div>
-      <div class="card">Weather App</div>
-      <div class="card">Calculator</div>
-    </div>
-  </section>
+        <section>
+            <h2>Projects</h2>
+        <div class="projects">
+          <div class="card">
+            <h3>Restaurant Dashboard</h3>
+            <p>HTML, CSS, JavaScript</p>
+           </div>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: papagariprasanna046@gmail.com</p>
-    <p>GitHub: https://github.com/046046-sv</p>
-    <p>LinkedIn: www.linkedin.com/in/prasanna-papagari-b04437253</p>
-  </section>
+           <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Personal Portfolio</p>
+           </div>
 
-  <footer>
-    <p align="center">© 2026 Prasanna. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+           <div class="card">
+            <h3>Temperature Converter</h3>
+            <p>JavaScript Project</p>
+           </div>
+           <div class="card">
+            <h3>Health Care Dashboard</h3>
+            <p>HTML, CSS, JavaScript</p>
+           </div>
+           <div class="card">
+            <h3>Glow with Us Dashboard</h3>
+            <p>HTML, CSS, JavaScript</p>
+           </div>
+        </div>
+
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Email: papagariprasanna046@gmail.com</p>
+            <p>LinkedIn: www.linkedin.com/in/prasanna-papagari-b04437253</p>
+        </section>
+
+    </main>
+
+</div>
+
 </body>
 </html>
